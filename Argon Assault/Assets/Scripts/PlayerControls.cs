@@ -5,14 +5,58 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    
-    // [SerializeField] InputAction movement;
-    
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float controlSpeed = 40f;
+    [SerializeField] float xRange = 12f;
+    [SerializeField] float yRange = 12f;
+    [SerializeField] float zRange = 8f;
+    [SerializeField] float positionPitchFactor = -2f;
+    [SerializeField] float controlPitchFactor = -20f;
+    [SerializeField] float positionYawFactor = 2f;
+    [SerializeField] float controlRollFactor = -20f;
+    float yThrow;
+    float xThrow;
+    float zThrow;
+
+    void Update()
     {
-        
+        ProcessTranslation();
+        ProcessRotation();
     }
+
+    void ProcessRotation() {
+        float pitchFromPos = transform.localPosition.y * positionPitchFactor;
+        float pitchFromCtrl = yThrow * controlPitchFactor;
+
+        float pitch = pitchFromPos + pitchFromCtrl;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);  
+    }
+
+    void ProcessTranslation() {
+        xThrow = Input.GetAxis("Horizontal");
+        yThrow = Input.GetAxis("Vertical");
+        zThrow = Input.GetAxis("Z");
+
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
+        float zOffset = zThrow * Time.deltaTime * controlSpeed;
+
+        float newXPos = transform.localPosition.x + xOffset;
+        float newYPos = transform.localPosition.y + yOffset;
+        float newZPos = transform.localPosition.z + zOffset;
+
+        float clampedXPos = Mathf.Clamp(newXPos, -xRange, xRange);
+        float clampedYPos = Mathf.Clamp(newYPos, -yRange, yRange);
+        float clampedZPos = Mathf.Clamp(newZPos, -zRange, zRange);
+
+        transform.localPosition = new Vector3(clampedXPos, clampedYPos, clampedZPos);
+    }
+}
+
+
+    // [SerializeField] InputAction movement;
 
     // void OnEnable() {
     //     movement.Enable();
@@ -23,12 +67,5 @@ public class PlayerControls : MonoBehaviour
     // }
 
     // Update is called once per frame
-    void Update()
-    {
         // float horizontalThrow = movement.ReadValue<Vector2>().x;
         // float verticalThrow = movement.ReadValue<Vector2>().y;
-
-        float horizontalThrow = Input.GetAxis("Horizontal");
-        float verticalThrow = Input.GetAxis("Vertical");
-    }
-}
