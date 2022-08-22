@@ -17,6 +17,11 @@ public class PlayerControls : MonoBehaviour
     float xThrow;
     float zThrow;
 
+    void Awake() {
+        transform.localPosition = new Vector3(0f, 0f, 0f);  
+        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);  
+    }
+
     void Update()
     {
         ProcessTranslation();
