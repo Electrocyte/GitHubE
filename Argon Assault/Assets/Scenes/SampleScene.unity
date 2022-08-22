@@ -471,6 +471,16 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 4109703840120479605, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
   m_PrefabInstance: {fileID: 550733307281870967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1073657578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6830191674905177636, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+  m_PrefabInstance: {fileID: 550733307281870967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1327863685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6288995996070532631, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+  m_PrefabInstance: {fileID: 550733307281870967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &550733307281870967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,6 +551,26 @@ PrefabInstance:
     - target: {fileID: 4109703840157276400, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -30.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977321109164076442, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977321109164076442, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1327863685}
+    - target: {fileID: 4977321109164076442, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1073657578}
+    - target: {fileID: 6288995996070532631, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+      propertyPath: m_Name
+      value: LaserBlue Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830191674905177636, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+      propertyPath: m_Name
+      value: LaserBlue Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
