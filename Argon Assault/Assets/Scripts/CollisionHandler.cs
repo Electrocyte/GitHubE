@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float loadDelay = 1f;
+    [SerializeField] ParticleSystem explosionVFX;
 
     void OnTriggerEnter(Collider other) {
         StartCrashSequence();
@@ -15,6 +16,9 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+        explosionVFX.Play();
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         GetComponent<PlayerControls>().enabled = false;
         Invoke("ReloadLevel", loadDelay);
     }

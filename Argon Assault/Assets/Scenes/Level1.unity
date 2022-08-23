@@ -842,6 +842,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4109703840157276400, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109703840157276400, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.11
+      objectReference: {fileID: 0}
     - target: {fileID: 4977321109164076442, guid: d63c20b637d2d834ebe455705777ff9b, type: 3}
       propertyPath: lasers.Array.data[0]
       value: 
