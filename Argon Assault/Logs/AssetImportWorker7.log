@@ -9,11 +9,11 @@ C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker7
 -projectPath
 E:/Games/GitHubE/Argon Assault
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker7.log
 -srvPort
 64773
 Successfully changed project path to: E:/Games/GitHubE/Argon Assault
@@ -47,7 +47,7 @@ E:/Games/GitHubE/Argon Assault
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 103.13 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 131.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.7f1 (24e8595d6d43)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -63,78 +63,78 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56716
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003165 seconds.
+Registered in 0.003269 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 108.15 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 119.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.476 seconds
+- Completed reload, in  0.554 seconds
 Domain Reload Profiling:
-	ReloadAssembly (477ms)
-		BeginReloadAssembly (45ms)
+	ReloadAssembly (555ms)
+		BeginReloadAssembly (60ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (359ms)
-			LoadAssemblies (44ms)
+		EndReloadAssembly (406ms)
+			LoadAssemblies (59ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (67ms)
+			SetupTypeCache (87ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (19ms)
-			SetupLoadedEditorAssemblies (238ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (253ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (108ms)
+				RefreshPlugins (120ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (90ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
+				ProcessInitializeOnLoadAttributes (94ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003107 seconds.
+Registered in 0.003164 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Games\GitHubE\Argon Assault\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Games\GitHubE\Argon Assault\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 119.67 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 123.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.067 seconds
+- Completed reload, in  1.213 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1068ms)
-		BeginReloadAssembly (79ms)
+	ReloadAssembly (1214ms)
+		BeginReloadAssembly (85ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (906ms)
-			LoadAssemblies (60ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1044ms)
+			LoadAssemblies (66ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (221ms)
+			SetupTypeCache (286ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (62ms)
-			SetupLoadedEditorAssemblies (530ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (591ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (120ms)
-				BeforeProcessingInitializeOnLoad (106ms)
-				ProcessInitializeOnLoadAttributes (269ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
+				RefreshPlugins (123ms)
+				BeforeProcessingInitializeOnLoad (108ms)
+				ProcessInitializeOnLoadAttributes (320ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -142,13 +142,13 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6837 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 168 unused Assets / (13.1 MB). Loaded Objects now: 7208.
 Memory consumption went from 327.5 MB to 314.4 MB.
-Total: 5.835200 ms (FindLiveObjects: 0.400400 ms CreateObjectMapping: 0.167700 ms MarkObjects: 3.280300 ms  DeleteObjects: 1.986100 ms)
+Total: 8.263900 ms (FindLiveObjects: 0.795000 ms CreateObjectMapping: 0.227400 ms MarkObjects: 4.260100 ms  DeleteObjects: 2.980600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -160,30 +160,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 91779.653038 seconds.
-  path: Assets/Prefabs/PlayerRig.prefab
-  artifactKey: Guid(d63c20b637d2d834ebe455705777ff9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerRig.prefab using Guid(d63c20b637d2d834ebe455705777ff9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6802df9db69616a2909bdc853678c020') in 0.225555 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 317.801368 seconds.
-  path: Assets/AssetPacks/StarSparrow/Prefabs/BonusContent/Asteroid Lava Red.prefab
-  artifactKey: Guid(45b62242ff99b0a48a47f713cd6d1687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/StarSparrow/Prefabs/BonusContent/Asteroid Lava Red.prefab using Guid(45b62242ff99b0a48a47f713cd6d1687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48b708322a3c67066af87581b4f48462') in 0.241228 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/AssetPacks/TerrainSampleAssets/Prefabs/Bush_A.prefab
-  artifactKey: Guid(0ec1c69bd47ad864f96cc2b516f6cd4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/TerrainSampleAssets/Prefabs/Bush_A.prefab using Guid(0ec1c69bd47ad864f96cc2b516f6cd4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9b8b3cf43492524376a2ca9ce3bec36') in 0.507695 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/AssetPacks/Standard Assets/Environment/SpeedTree/Broadleaf/Broadleaf_Desktop.spm
-  artifactKey: Guid(c91c1eb85782d5748ace27eb4d7415bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Standard Assets/Environment/SpeedTree/Broadleaf/Broadleaf_Desktop.spm using Guid(c91c1eb85782d5748ace27eb4d7415bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1392b0d7c73d811d47014ff62139adb') in 0.754071 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

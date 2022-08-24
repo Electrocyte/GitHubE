@@ -15,6 +15,7 @@ public class PlayerControls : MonoBehaviour
     [Header("Laser gun array.")]
     [Tooltip("Pew Pew.")]     
     [SerializeField] GameObject[] lasers;
+    [SerializeField] GameObject[] particleLance;
     [Header("Position and rotation for spacecraft.")]
     [Tooltip("Pitch = x; yaw = y; roll = z.")] 
     [SerializeField] float positionPitchFactor = -2f;
@@ -42,8 +43,19 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetButton("Fire1")) {
             SetLasersActive(true);
+        } else if (Input.GetButton("Fire2")) {
+            SetParticleLanceActive(true);
         } else {
             SetLasersActive(false);
+            SetParticleLanceActive(false);
+        }
+    }
+
+    private void SetParticleLanceActive(bool activateLance)
+    {
+        foreach (GameObject lance in particleLance) {
+            var emissionModule = lance.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = activateLance;
         }
     }
 
