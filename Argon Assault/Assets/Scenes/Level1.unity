@@ -255,8 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 462195625702595226, guid: 6fe5a4145de8f7143b343eb4493303e1, type: 3}
+  hitVFX: {fileID: 462195625702595226, guid: 5ece7c6da0f6d0742aeaac9d0f478219, type: 3}
   parent: {fileID: 1991116056}
   increaseScore: 15
+  hitPoints: 1
 --- !u!1 &409040379
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,8 +472,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 462195625702595226, guid: 6fe5a4145de8f7143b343eb4493303e1, type: 3}
+  hitVFX: {fileID: 462195625702595226, guid: 5ece7c6da0f6d0742aeaac9d0f478219, type: 3}
   parent: {fileID: 1991116056}
   increaseScore: 15
+  hitPoints: 6
 --- !u!136 &856089824
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -744,8 +748,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 462195625702595226, guid: 6fe5a4145de8f7143b343eb4493303e1, type: 3}
+  hitVFX: {fileID: 462195625702595226, guid: 5ece7c6da0f6d0742aeaac9d0f478219, type: 3}
   parent: {fileID: 1991116056}
   increaseScore: 15
+  hitPoints: 6
 --- !u!136 &1239985418
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1226,6 +1232,14 @@ PrefabInstance:
     - target: {fileID: 8336999912916330763, guid: b374eab4180c4ee488a3bc3a6432bf7e, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400793327220698574, guid: b374eab4180c4ee488a3bc3a6432bf7e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 417
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400793327220698574, guid: b374eab4180c4ee488a3bc3a6432bf7e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -88
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b374eab4180c4ee488a3bc3a6432bf7e, type: 3}
