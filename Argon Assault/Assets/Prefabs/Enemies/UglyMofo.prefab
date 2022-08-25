@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 1116344253039004838}
   - component: {fileID: 1106293468957296866}
   - component: {fileID: 3189893920906388533}
+  - component: {fileID: -5914008250568545224}
   m_Layer: 0
   m_Name: UglyMofo
   m_TagString: Untagged
@@ -234,9 +235,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 462195625702595226, guid: 6fe5a4145de8f7143b343eb4493303e1, type: 3}
   hitVFX: {fileID: 462195625702595226, guid: 5ece7c6da0f6d0742aeaac9d0f478219, type: 3}
-  parent: {fileID: 0}
   increaseScore: 15
   hitPoints: 2
+--- !u!65 &-5914008250568545224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084821228175312336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.115113, y: 2.7828712, z: 10.850533}
+  m_Center: {x: 0, y: -0.000013887882, z: 0.0000026226044}
 --- !u!1 &2234187033660141721
 GameObject:
   m_ObjectHideFlags: 0

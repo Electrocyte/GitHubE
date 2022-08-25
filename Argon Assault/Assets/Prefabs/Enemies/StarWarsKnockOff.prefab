@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: 5347249040884682805}
   - component: {fileID: 7913327993259959551}
   - component: {fileID: 2740559657394459467}
+  - component: {fileID: -7887604370559783093}
   m_Layer: 0
   m_Name: StarWarsKnockOff
   m_TagString: Untagged
@@ -822,9 +823,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 462195625702595226, guid: 6fe5a4145de8f7143b343eb4493303e1, type: 3}
   hitVFX: {fileID: 462195625702595226, guid: 5ece7c6da0f6d0742aeaac9d0f478219, type: 3}
-  parent: {fileID: 0}
   increaseScore: 15
   hitPoints: 2
+--- !u!65 &-7887604370559783093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561683268523885866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.85927, y: 2.496461, z: 10.716055}
+  m_Center: {x: 0.00000023841858, y: -0.000001013279, z: 0}
 --- !u!1 &8753897061728030332
 GameObject:
   m_ObjectHideFlags: 0

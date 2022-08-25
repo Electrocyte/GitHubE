@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadDelay: 1
   explosionVFX: {fileID: 6341667185555462723}
+  tokenGrabClip: {fileID: 0}
 --- !u!65 &107698006
 BoxCollider:
   m_ObjectHideFlags: 0

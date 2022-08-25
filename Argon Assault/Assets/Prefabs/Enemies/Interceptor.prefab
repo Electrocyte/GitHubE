@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4470760636352107035}
   - component: {fileID: 1868890858477184721}
   - component: {fileID: 4242279770224334736}
+  - component: {fileID: 156244938985478097}
   m_Layer: 0
   m_Name: Interceptor
   m_TagString: Untagged
@@ -99,9 +100,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 462195625702595226, guid: 6fe5a4145de8f7143b343eb4493303e1, type: 3}
   hitVFX: {fileID: 462195625702595226, guid: 5ece7c6da0f6d0742aeaac9d0f478219, type: 3}
-  parent: {fileID: 0}
   increaseScore: 15
   hitPoints: 6
+--- !u!65 &156244938985478097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211491221744273156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.096986, y: 6.6450253, z: 10.620746}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &681312379295614514
 GameObject:
   m_ObjectHideFlags: 0

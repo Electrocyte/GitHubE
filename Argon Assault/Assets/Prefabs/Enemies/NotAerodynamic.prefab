@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 4979851046385018674}
   - component: {fileID: 4988527226284784280}
   - component: {fileID: 1108572437311162017}
+  - component: {fileID: -1747819468672130123}
   m_Layer: 0
   m_Name: NotAerodynamic
   m_TagString: Untagged
@@ -735,9 +736,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 462195625702595226, guid: 6fe5a4145de8f7143b343eb4493303e1, type: 3}
   hitVFX: {fileID: 462195625702595226, guid: 5ece7c6da0f6d0742aeaac9d0f478219, type: 3}
-  parent: {fileID: 0}
   increaseScore: 15
   hitPoints: 2
+--- !u!65 &-1747819468672130123
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001445070122329772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.60827, y: 1.7607899, z: 12.307949}
+  m_Center: {x: 0, y: -0.00001564622, z: 0}
 --- !u!1 &5051439714124768586
 GameObject:
   m_ObjectHideFlags: 0

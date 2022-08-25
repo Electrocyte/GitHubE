@@ -145,6 +145,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4109703840120479604}
     m_Modifications:
+    - target: {fileID: 107698001, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: explosionSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 95c465552b9c92941b2e18167902fbc5, type: 3}
     - target: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_Name
       value: StarSparrow1
