@@ -14,7 +14,7 @@ public class SimpleNoiseFilter : INoiseFilter
 
     public float Evaluate(Vector3 point) {
         float noiseValue = 0f;
-        float frequency = settings.BaseRougness;
+        float frequency = settings.BaseRoughness;
         float amplitude = 1f;
 
         for (int i = 0; i < settings.numLayers; i++)

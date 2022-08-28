@@ -19,38 +19,38 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: 0.17
-        rougness: 1.18
-        BaseRougness: 0.71
-        persistence: 0.37
+        strength: 0.08
+        rougness: 2.32
+        BaseRoughness: 1
+        persistence: 0.34
         numLayers: 5
         centre: {x: 0, y: 0, z: 0}
-        minValue: 0.73
-      rigidNoiseSettings:
+        minValue: 0.6
+      ridgedNoiseSettings:
         strength: 1
         rougness: 2
-        BaseRougness: 1
+        BaseRoughness: 1
         persistence: 0.5
         numLayers: 1
         centre: {x: 0, y: 0, z: 0}
         minValue: 0
         weightMultiplier: 0.8
-  - enabled: 1
+  - enabled: 0
     useFirstLayerAsMask: 1
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
         strength: 0.08
         rougness: 1.72
-        BaseRougness: 1.03
+        BaseRoughness: 1
         persistence: 1.32
         numLayers: 4
         centre: {x: 0, y: 0, z: 0}
         minValue: 0.41
-      rigidNoiseSettings:
+      ridgedNoiseSettings:
         strength: 1
         rougness: 2
-        BaseRougness: 1
+        BaseRoughness: 1
         persistence: 0.5
         numLayers: 1
         centre: {x: 0, y: 0, z: 0}
@@ -61,19 +61,19 @@ MonoBehaviour:
     noiseSettings:
       filterType: 1
       simpleNoiseSettings:
-        strength: -0.12
+        strength: 0.12
         rougness: 1.74
-        BaseRougness: 2.9
+        BaseRoughness: 1
         persistence: 0.92
         numLayers: 1
         centre: {x: 0, y: 0, z: 0}
         minValue: -0.04
-      rigidNoiseSettings:
-        strength: 0.05
-        rougness: 1.92
-        BaseRougness: 1.07
-        persistence: 1.5
-        numLayers: 7
+      ridgedNoiseSettings:
+        strength: 1.3
+        rougness: 1.58
+        BaseRoughness: 1.36
+        persistence: 0.65
+        numLayers: 8
         centre: {x: 0, y: 0, z: 0}
-        minValue: 0.3
-        weightMultiplier: 0.88
+        minValue: 0.54
+        weightMultiplier: 1.8
