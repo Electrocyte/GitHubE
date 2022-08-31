@@ -2,19 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 [ExecuteAlways]
 public class CoordinateLabeller : MonoBehaviour
 {
+    [SerializeField] Color defaultColour = Color.blue;
+    [SerializeField] Color blockedColour = Color.red;
+
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
+    
     int snapSquareSize = 10;
     // UnityEditor.EditorSnapSettings.move.x
     // this should be used instead of a fixed value of 10
     // and yet it does not work even with scale
 
+    Waypoint waypoint;
+
     void Awake() {
         label = GetComponent<TextMeshPro>();
+        label.enabled = false;
+        waypoint = GetComponentInParent<Waypoint>();
         DisplayCurrCoord();
     }
 
@@ -24,6 +33,24 @@ public class CoordinateLabeller : MonoBehaviour
         if (!Application.isPlaying) {
             DisplayCurrCoord();
             UpdateObjName();
+        }
+
+        ColourCoordinates();
+        ToggleLabels();
+    }
+
+    void ToggleLabels() {
+        if (Input.GetKeyDown(KeyCode.C)) {
+            label.enabled = !label.IsActive();
+        }
+    }
+
+    private void ColourCoordinates()
+    {
+        if (waypoint.IsPlaceable) {
+            label.color = defaultColour;
+        } else {
+            label.color = blockedColour;
         }
     }
 

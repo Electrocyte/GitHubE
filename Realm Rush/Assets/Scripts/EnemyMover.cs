@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class EnemyMover : MonoBehaviour
 {
-    
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
-    [SerializeField] GameObject fuse;
     [SerializeField] [Range(0f, 5f)] float speed = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(FollowPath());   
+    }
+
+    void Update() {
+        ;
     }
 
     private IEnumerator FollowPath()
@@ -34,16 +36,7 @@ public class EnemyMover : MonoBehaviour
                 travelPercent += Time.deltaTime * speed;
                 int tileNumber = path.Count;
 
-                if (fuse) {
-                    // var child = transform.GetChild(7); // find child by index                   
-                    var parent = transform.Find("Fuse"); // find child by name                    
-                }
-
                 if (currentGameObjTag == "Cake") {  
-                    
-                    // if (tileNumber == n) {
-                    //     Debug.Log("Fuse runs out.");
-                    // }
 
                     if (Time.frameCount > 60f / speed) {
                         endPosition.y = 3;
