@@ -27,16 +27,23 @@ public class EnemyMover : MonoBehaviour
 
             transform.LookAt(endPosition);
 
-            var currentGameObj = gameObject.tag;
+            var currentGameObjTag = gameObject.tag;
+
             n++;
             while (travelPercent < 1f) {
                 travelPercent += Time.deltaTime * speed;
+                int tileNumber = path.Count;
 
-                if (currentGameObj == "Cake") {   
+                if (fuse) {
+                    // var child = transform.GetChild(7); // find child by index                   
+                    var parent = transform.Find("Fuse"); // find child by name                    
+                }
 
-                    if (path.Count == n) {
-                        Debug.Log("Fuse runs out.");
-                    }
+                if (currentGameObjTag == "Cake") {  
+                    
+                    // if (tileNumber == n) {
+                    //     Debug.Log("Fuse runs out.");
+                    // }
 
                     if (Time.frameCount > 60f / speed) {
                         endPosition.y = 3;

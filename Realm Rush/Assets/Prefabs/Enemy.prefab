@@ -1040,6 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: []
+  fuse: {fileID: 0}
   speed: 1
 --- !u!1 &7140212438346477880
 GameObject:

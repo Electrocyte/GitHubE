@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1495613468522992700, guid: 8ede1c91c39bdd04aae65914b1621a24, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3999812190211284021, guid: 8ede1c91c39bdd04aae65914b1621a24, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -29,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5751771470381975245, guid: 8ede1c91c39bdd04aae65914b1621a24, type: 3}
       propertyPath: m_Name
-      value: TileRoadStr Variant
+      value: TileRoadStr90
       objectReference: {fileID: 0}
     - target: {fileID: 5751771470381975246, guid: 8ede1c91c39bdd04aae65914b1621a24, type: 3}
       propertyPath: m_RootOrder
