@@ -1066,6 +1066,7 @@ GameObject:
   - component: {fileID: 2989620015357093844}
   - component: {fileID: 6454760833178198478}
   - component: {fileID: 5999984535113446523}
+  - component: {fileID: -67611898616782523}
   m_Layer: 0
   m_Name: Cake of Death
   m_TagString: Cake
@@ -1148,6 +1149,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitPoints: 14
+--- !u!114 &-67611898616782523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368048566182898439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df346ed4a5ec2884aaf8d49eaf90bb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldReward: 25
+  goldPenalty: 25
 --- !u!1 &9054077705784089570
 GameObject:
   m_ObjectHideFlags: 0
