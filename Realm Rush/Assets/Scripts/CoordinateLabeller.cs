@@ -34,6 +34,7 @@ public class CoordinateLabeller : MonoBehaviour
         if (!Application.isPlaying) {
             DisplayCurrCoord();
             UpdateObjName();
+            label.enabled = true;
         }
 
         SetLabelColour();
