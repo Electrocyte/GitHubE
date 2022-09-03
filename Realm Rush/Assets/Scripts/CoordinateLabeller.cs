@@ -21,6 +21,7 @@ public class CoordinateLabeller : MonoBehaviour
 
     Waypoint waypoint;
 
+
     void Awake() {
         label = GetComponent<TextMeshPro>();
         label.enabled = false;
