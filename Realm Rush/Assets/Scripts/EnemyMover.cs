@@ -32,12 +32,22 @@ public class EnemyMover : MonoBehaviour
         GameObject parent = GameObject.FindGameObjectWithTag("Path");
 
         foreach (Transform child in parent.transform) {
-            path.Add(child.GetComponent<Waypoint>());
+            Waypoint waypoint = child.GetComponent<Waypoint>();
+
+            if (waypoint != null) {
+                path.Add(waypoint);
+            }
         }
     }
 
     void ReturnToStart() {
         transform.position = path[0].transform.position;
+
+    }
+
+    void FinishPath() {
+        enemy.StealGold();
+        gameObject.SetActive(false);        
     }
 
     private IEnumerator FollowPath()
@@ -72,7 +82,8 @@ public class EnemyMover : MonoBehaviour
             }
 
         }
-        enemy.StealGold();
-        gameObject.SetActive(false);
+        
+        FinishPath();
+
     }
 }
