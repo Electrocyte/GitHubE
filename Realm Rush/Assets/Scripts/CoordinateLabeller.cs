@@ -10,22 +10,25 @@ public class CoordinateLabeller : MonoBehaviour
 {
     [SerializeField] Color defaultColour = Color.blue;
     [SerializeField] Color blockedColour = Color.red;
+    [SerializeField] Color exploredColour = Color.black;
+    [SerializeField] Color pathColour = new Color(1f, 0.5f, 0f);
 
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
     
-    int snapSquareSize = 10;
+    // int snapSquareSize = 10;
     // UnityEditor.EditorSnapSettings.move.x
     // this should be used instead of a fixed value of 10
     // and yet it does not work even with scale
 
-    Waypoint waypoint;
+    GridManager gridManager;
 
 
     void Awake() {
         label = GetComponent<TextMeshPro>();
         label.enabled = false;
-        waypoint = GetComponentInParent<Waypoint>();
+
+        gridManager = FindObjectOfType<GridManager>();
         DisplayCurrCoord();
     }
 
@@ -50,17 +53,34 @@ public class CoordinateLabeller : MonoBehaviour
 
     private void SetLabelColour()
     {
-        if (waypoint.IsPlaceable) {
-            label.color = defaultColour;
-        } else {
+        if (gridManager == null) {
+            return;
+        }
+        
+        Node node = gridManager.GetNode(coordinates);
+
+        if (node == null) {
+            return;
+        }
+
+        if (!node.isWalkable) {
             label.color = blockedColour;
+        }
+        else if (!node.isPath) {
+            label.color = pathColour;
+        }
+        else if (!node.isExplored) {
+            label.color = exploredColour;
+        } else {label.color = defaultColour;
         }
     }
 
     private void DisplayCurrCoord()
     {
-        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / snapSquareSize);
-        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / snapSquareSize);
+        if (gridManager == null) { return; }
+
+        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / gridManager.UnityGridSize);
+        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / gridManager.UnityGridSize);
 
         label.text = coordinates.x + "," + coordinates.y;
     }
