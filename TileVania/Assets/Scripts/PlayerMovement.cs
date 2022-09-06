@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f;
+    [SerializeField] float climbSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     Vector2 moveInput;
     Rigidbody2D myRigidbody2D;
@@ -26,6 +27,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Run(); 
         FlipSprite();
+        ClimbLadder();
+    }
+
+    private void ClimbLadder()
+    {
+        if (!capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { return;}
+
+        Vector2 climbVelocity = new Vector2(myRigidbody2D.velocity.x, moveInput.y * climbSpeed);
+        myRigidbody2D.velocity = climbVelocity;
     }
 
     private void FlipSprite()
@@ -54,9 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     // takes its name from the animator with same name
     void OnJump(InputValue value) {
-        if (!capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
-            return;
-        }
+        if (!capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
         
         if (value.isPressed) {
             myRigidbody2D.velocity += new Vector2(0f, jumpSpeed);

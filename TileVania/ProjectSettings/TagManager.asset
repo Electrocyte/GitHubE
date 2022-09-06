@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Climbing
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Palette
     uniqueID: 913186599
+    locked: 0
+  - name: Climbing
+    uniqueID: 2672218561
     locked: 0
   - name: Player
     uniqueID: 2672535161
