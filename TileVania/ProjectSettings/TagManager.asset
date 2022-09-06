@@ -50,3 +50,6 @@ TagManager:
   - name: Palette
     uniqueID: 913186599
     locked: 0
+  - name: Player
+    uniqueID: 2672535161
+    locked: 0
