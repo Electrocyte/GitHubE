@@ -9,12 +9,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
+
     Vector2 moveInput;
     Rigidbody2D myRigidbody2D;
     Animator animator;
     CapsuleCollider2D bodyCollider2D;
     BoxCollider2D feetCollider2D;
     float originalGravity;
+    bool isAlive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +32,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isAlive) { return; }
         Run(); 
         FlipSprite();
         ClimbLadder();
+        Die();
+    }
+
+    private void Die()
+    {
+        if (bodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies"))) {
+            isAlive = false;
+        }
     }
 
     private void ClimbLadder()
@@ -74,11 +85,14 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        if (!isAlive) { return; }
         moveInput = value.Get<Vector2>();
     }
 
     // takes its name from the animator with same name
     void OnJump(InputValue value) {
+        if (!isAlive) { return; }
+
         if (!feetCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
         
         if (value.isPressed) {

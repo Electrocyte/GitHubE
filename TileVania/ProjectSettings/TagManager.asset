@@ -16,7 +16,7 @@ TagManager:
   - Player
   - Background
   - Mushroom
-  - 
+  - Enemies
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Climbing
     uniqueID: 2672218561
+    locked: 0
+  - name: Enemies
+    uniqueID: 453072369
     locked: 0
   - name: Player
     uniqueID: 2672535161
