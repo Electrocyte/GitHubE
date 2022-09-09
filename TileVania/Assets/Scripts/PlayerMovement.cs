@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] Vector2 deathKick = new Vector2(10f, 60f);
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody2D;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D bodyCollider2D;
     BoxCollider2D feetCollider2D;
     float originalGravity;
+    float deathGravity = 2f;
     bool isAlive = true;
 
     // Start is called before the first frame update
@@ -41,8 +43,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Die()
     {
-        if (bodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies"))) {
+        if (bodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"))) {
             isAlive = false;
+            animator.SetTrigger("Dying");
+            myRigidbody2D.gravityScale = deathGravity; 
+            myRigidbody2D.velocity = deathKick;
         }
     }
 
