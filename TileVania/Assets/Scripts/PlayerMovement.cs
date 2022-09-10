@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     CapsuleCollider2D bodyCollider2D;
     BoxCollider2D feetCollider2D;
-    // LevelExit levelExit;
+
     float originalGravity;
     float deathGravity = 2f;
     bool isAlive = true;
@@ -30,8 +30,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         bodyCollider2D = GetComponent<CapsuleCollider2D>();
         feetCollider2D = GetComponent<BoxCollider2D>();
-
-        // levelExit = FindObjectOfType<LevelExit>();
 
         originalGravity = myRigidbody2D.gravityScale;
     }
@@ -53,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("Dying");
             myRigidbody2D.gravityScale = deathGravity; 
             myRigidbody2D.velocity = deathKick;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 

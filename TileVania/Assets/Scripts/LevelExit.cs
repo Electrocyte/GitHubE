@@ -9,7 +9,9 @@ public class LevelExit : MonoBehaviour
     float timeDelay = 1f;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        StartCoroutine(NextLevel());
+        if (other.tag == "Player") {
+            StartCoroutine(NextLevel());
+        }
     }
 
     IEnumerator NextLevel() {
