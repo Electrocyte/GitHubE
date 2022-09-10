@@ -5,6 +5,10 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 10f;
+    [SerializeField] AudioClip pewPewSFX;
+    [SerializeField] AudioClip wallHitSFX;
+    [SerializeField] AudioClip enemyDieSFX;
+
     Rigidbody2D rb;
     PlayerMovement playerMovement;
     float xSpeed;
@@ -15,6 +19,7 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         xSpeed = playerMovement.transform.localScale.x * bulletSpeed;
+        AudioSource.PlayClipAtPoint(pewPewSFX, Camera.main.transform.position, 0.1f);
     }
 
     // Update is called once per frame
@@ -24,13 +29,16 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+
         if (other.tag == "Enemy") {
+            AudioSource.PlayClipAtPoint(enemyDieSFX, Camera.main.transform.position);
             Destroy(other.gameObject);
         }
         Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        AudioSource.PlayClipAtPoint(wallHitSFX, Camera.main.transform.position, 0.05f);
         Destroy(gameObject);
     }
 }

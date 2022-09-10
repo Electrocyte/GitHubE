@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     private void Die()
     {
         if (bodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"))) {
+
             isAlive = false;
             animator.SetTrigger("Dying");
             myRigidbody2D.gravityScale = deathGravity; 

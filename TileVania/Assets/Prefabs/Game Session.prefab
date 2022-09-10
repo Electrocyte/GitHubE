@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: 3
+  playerDeathSFX: {fileID: 8300000, guid: 81653575d351bd34a9a33b4343effb23, type: 3}
