@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d608d945daca6e4bad21578d012f36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 20
   pewPewSFX: {fileID: 8300000, guid: 9823a519c7e5b9e488b6b3f542ac8aee, type: 3}
   wallHitSFX: {fileID: 8300000, guid: 87ec9b2337be32744ba33d4addc9e2df, type: 3}
   enemyDieSFX: {fileID: 8300000, guid: 38a946c1fd6a56c408456f60b0e14052, type: 3}

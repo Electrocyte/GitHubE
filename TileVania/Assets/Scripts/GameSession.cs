@@ -3,10 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
+    [SerializeField] int gold = 0;
+    [SerializeField] TextMeshProUGUI livesText;
+    [SerializeField] TextMeshProUGUI goldText;
 
     // Start is called before the first frame update
     void Awake()
@@ -20,14 +24,24 @@ public class GameSession : MonoBehaviour
         }
     }
 
+    void Start() {
+        livesText.text = playerLives.ToString();
+        goldText.text = gold.ToString();
+    }
+
     public void ProcessPlayerDeath() {
         if (playerLives > 1) {
-            TakeLife();
+            Invoke("TakeLife", 1f);
         } else {
-            ResetGameSession();
+            Invoke("ResetGameSession", 1f);
         }
     }
 
+    public void IncreaseGold(int pointsToAdd) {
+        gold += pointsToAdd;
+        goldText.text = gold.ToString();
+    }
+    
     private void ResetGameSession()
     {
         SceneManager.LoadScene(0);
@@ -39,5 +53,6 @@ public class GameSession : MonoBehaviour
         playerLives--;
         int currentSceneIdx = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIdx);
+        livesText.text = playerLives.ToString();
     }
 }
