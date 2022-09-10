@@ -103,6 +103,7 @@ MonoBehaviour:
   pewPewSFX: {fileID: 8300000, guid: 9823a519c7e5b9e488b6b3f542ac8aee, type: 3}
   wallHitSFX: {fileID: 8300000, guid: 87ec9b2337be32744ba33d4addc9e2df, type: 3}
   enemyDieSFX: {fileID: 8300000, guid: 38a946c1fd6a56c408456f60b0e14052, type: 3}
+  enemyDieSFX2: {fileID: 8300000, guid: 2fa617e450dd5ac44a3fd767b5d73240, type: 3}
 --- !u!50 &9136746373189008984
 Rigidbody2D:
   serializedVersion: 4

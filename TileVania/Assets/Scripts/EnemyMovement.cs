@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] float enemySpeed = 1f;
+    [SerializeField] float enemySpeed;
+    [SerializeField] float enemyScale;
     Rigidbody2D enemyRigidbody2D;
     
     // Start is called before the first frame update
@@ -27,6 +28,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void FlipEnemyFacing()
     {
-        transform.localScale = new Vector2 (-(Mathf.Sign(enemyRigidbody2D.velocity.x)), 1f);
+        transform.localScale = new Vector2 (-(Mathf.Sign(enemyRigidbody2D.velocity.x)), enemyScale);
     }
 }

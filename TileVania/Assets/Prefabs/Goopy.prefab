@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 1
+  enemyScale: 1
 --- !u!61 &8572448242096579311
 BoxCollider2D:
   m_ObjectHideFlags: 0

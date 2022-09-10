@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] AudioClip pewPewSFX;
     [SerializeField] AudioClip wallHitSFX;
     [SerializeField] AudioClip enemyDieSFX;
+    [SerializeField] AudioClip enemyDieSFX2;
 
     Rigidbody2D rb;
     PlayerMovement playerMovement;
@@ -34,6 +35,12 @@ public class Bullet : MonoBehaviour
             AudioSource.PlayClipAtPoint(enemyDieSFX, Camera.main.transform.position);
             Destroy(other.gameObject);
         }
+
+        if (other.tag == "EnemyOrange") {
+            AudioSource.PlayClipAtPoint(enemyDieSFX2, Camera.main.transform.position);
+            Destroy(other.gameObject);
+        }
+
         Destroy(gameObject);
     }
 
