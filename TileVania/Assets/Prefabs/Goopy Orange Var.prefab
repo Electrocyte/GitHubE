@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyOrange
       objectReference: {fileID: 0}
+    - target: {fileID: 8572448242096579306, guid: 329445c0c902de4449d322d9dbae53b3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8572448242096579308, guid: 329445c0c902de4449d322d9dbae53b3, type: 3}
       propertyPath: m_Color.b
       value: 0
